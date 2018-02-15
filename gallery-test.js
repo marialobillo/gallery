@@ -14,3 +14,11 @@ TEST.areEqual(gal.displayImage.getAttribute("src"), "images/blue.jpg", "Gallery.
 TEST.areEqual(gal.set("green"), 3, "Gallery.set (with string) shoudl return the corresponding number.");
 
 TEST.areEqual(gal.displayImage.getAttribute("src"), "images/green.jpg", "Gallery.set (with number)should change play image.");
+
+TEST.areEqual(gal.next(), 4, "Gallery.next should advance images");
+
+TEST.areEqual(gal.next(), 0, "Gallery i should advance images");
+
+TEST.areEqual(gal.prev(), 4, "Gallery.next should go back images");
+
+TEST.areEqual(gal.prev(), 0, "Gallery i should go back images");
