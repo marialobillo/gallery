@@ -9,4 +9,8 @@ var TEST = {
     console.[result ? "log" : "warn"]( (result ? "PASS: " : "FAIL: ") + message );
     return result;
   }
-}
+};
+
+TEST.isGreaterThan = function(val, min, msg){
+  return this._output(val > min, msg);
+};
