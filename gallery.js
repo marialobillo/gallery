@@ -12,6 +12,18 @@ var Gallery = (function(){
           return (this.idx = i);
         }
         return -1;
+      },
+      next: function(){
+        if(this.idx === this.imgs.length - 1){
+          return this.set(0);
+        }
+        return this.set(i + 1);
+      },
+      prev: function(){
+        if(this.idx === 0){
+          return this.set(this.imgs.length - 1);
+        }
+        return this.set(i - 1);
       }
 
     };
